@@ -91,6 +91,8 @@ Wikipedia says
 
 **Programmatic Example**
 
+First of all we have a door interface and the implementation
+
 The implementation and usage examples are available in [PHP 7](examples/php/creational/simple-factory.php), [C#](examples/csharp/creational/SimpleFactory.cs), and [Python](examples/python/creational/simple_factory.py).
 
 **When to Use?**
@@ -109,9 +111,9 @@ In plain words
 Wikipedia says
 > In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created. This is done by creating objects by calling a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden by derived classes—rather than by calling a constructor.
 
- **Programmatic Example**
-
 Taking our hiring manager example above. First of all we have an interviewer interface and some implementations for it
+
+The implementation and usage examples are available in [PHP 7](examples/php/creational/factory-method.php), [C#](examples/csharp/creational/FactoryMethod.cs), and [Python](examples/python/creational/factory_method.py).
 
 
 Now let us create our `HiringManager`
@@ -139,6 +141,8 @@ Wikipedia says
 **Programmatic Example**
 
 Translating the door example above. First of all we have our `Door` interface and some implementation for it
+
+The implementation and usage examples are available in [PHP 7](examples/php/creational/abstract-factory.php), [C#](examples/csharp/creational/AbstractFactory.cs), and [Python](examples/python/creational/abstract_factory.py).
 
 Then we have some fitting experts for each door type
 
@@ -168,9 +172,9 @@ Having said that let me add a bit about what telescoping constructor anti-patter
 
 As you can see; the number of constructor parameters can quickly get out of hand and it might become difficult to understand the arrangement of parameters. Plus this parameter list could keep on growing if you would want to add more options in future. This is called telescoping constructor anti-pattern.
 
-**Programmatic Example**
-
 The sane alternative is to use the builder pattern. First of all we have our burger that we want to make
+
+The implementation and usage examples are available in [PHP 7](examples/php/creational/builder.php), [C#](examples/csharp/creational/Builder.cs), and [Python](examples/python/creational/builder.py).
 
 
 And then we have the builder
@@ -199,6 +203,8 @@ In short, it allows you to create a copy of an existing object and modify it to 
 
 In PHP, it can be easily done using `clone`
 
+The implementation and usage examples are available in [PHP 7](examples/php/creational/prototype.php), [C#](examples/csharp/creational/Prototype.cs), and [Python](examples/python/creational/prototype.py).
+
 Then it can be cloned like below
 
 Also you could use the magic method `__clone` to modify the cloning behavior.
@@ -223,6 +229,8 @@ Singleton pattern is actually considered an anti-pattern and overuse of it shoul
 **Programmatic Example**
 
 To create a singleton, make the constructor private, disable cloning, disable extension and create a static variable to house the instance
+
+The implementation and usage examples are available in [PHP 7](examples/php/creational/singleton.php), [C#](examples/csharp/creational/Singleton.cs), and [Python](examples/python/creational/singleton.py).
 Then in order to use
 
 Structural Design Patterns
@@ -260,6 +268,8 @@ Consider a game where there is a hunter and he hunts lions.
 
 First we have an interface `Lion` that all types of lions have to implement
 
+The implementation and usage examples are available in [PHP 7](examples/php/structural/adapter.php), [C#](examples/csharp/structural/Adapter.cs), and [Python](examples/python/structural/adapter.py).
+
 And hunter expects any implementation of `Lion` interface to hunt.
 
 Now let's say we have to add a `WildDog` in our game so that hunter can hunt that also. But we can't do that directly because dog has a different interface. To make it compatible for our hunter, we will have to create an adapter that is compatible
@@ -284,6 +294,8 @@ Wikipedia says
 
 Translating our WebPage example from above. Here we have the `WebPage` hierarchy
 
+The implementation and usage examples are available in [PHP 7](examples/php/structural/bridge.php), [C#](examples/csharp/structural/Bridge.cs), and [Python](examples/python/structural/bridge.py).
+
 And the separate theme hierarchy
 And both the hierarchies
 
@@ -302,6 +314,8 @@ Wikipedia says
 **Programmatic Example**
 
 Taking our employees example from above. Here we have different employee types
+
+The implementation and usage examples are available in [PHP 7](examples/php/structural/composite.php), [C#](examples/csharp/structural/Composite.cs), and [Python](examples/python/structural/composite.py).
 
 
 Then we have an organization which consists of several different types of employees
@@ -327,6 +341,8 @@ Wikipedia says
 
 Lets take coffee for example. First of all we have a simple coffee implementing the coffee interface
 
+The implementation and usage examples are available in [PHP 7](examples/php/structural/decorator.php), [C#](examples/csharp/structural/Decorator.cs), and [Python](examples/python/structural/decorator.py).
+
 We want to make the code extensible to allow options to modify it if required. Lets make some add-ons (decorators)
 
 Lets make a coffee now
@@ -348,6 +364,8 @@ Wikipedia says
 
 Taking our computer example from above. Here we have the computer class
 
+The implementation and usage examples are available in [PHP 7](examples/php/structural/facade.php), [C#](examples/csharp/structural/Facade.cs), and [Python](examples/python/structural/facade.py).
+
 Here we have the facade
 Now to use the facade
 
@@ -366,6 +384,8 @@ Wikipedia says
 **Programmatic example**
 
 Translating our tea example from above. First of all we have tea types and tea maker
+
+The implementation and usage examples are available in [PHP 7](examples/php/structural/flyweight.php), [C#](examples/csharp/structural/Flyweight.cs), and [Python](examples/python/structural/flyweight.py).
 
 
 Then we have the `TeaShop` which takes orders and serves them
@@ -387,6 +407,8 @@ Wikipedia says
 **Programmatic Example**
 
 Taking our security door example from above. Firstly we have the door interface and an implementation of door
+
+The implementation and usage examples are available in [PHP 7](examples/php/structural/proxy.php), [C#](examples/csharp/structural/Proxy.cs), and [Python](examples/python/structural/proxy.py).
 
 Then we have a proxy to secure any doors that we want
 And here is how it can be used
@@ -428,6 +450,8 @@ Wikipedia says
 
 Translating our account example above. First of all we have a base account having the logic for chaining the accounts together and some accounts
 
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/chain-of-responsibility.php), [C#](examples/csharp/behavioral/ChainOfResponsibility.cs), and [Python](examples/python/behavioral/chain_of_responsibility.py).
+
 
 Now let's prepare the chain using the links defined above (i.e. Bank, Paypal, Bitcoin)
 
@@ -448,6 +472,8 @@ Wikipedia says
 **Programmatic Example**
 
 First of all we have the receiver that has the implementation of every action that could be performed
+
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/command.php), [C#](examples/csharp/behavioral/Command.cs), and [Python](examples/python/behavioral/command.py).
 then we have an interface that each of the commands are going to implement and then we have a set of commands
 Then we have an `Invoker` with whom the client will interact to process any commands
 Finally let's see how we can use it in our client
@@ -470,6 +496,8 @@ Wikipedia says
 
 In PHP it is quite easy to implement using SPL (Standard PHP Library). Translating our radio stations example from above. First of all we have `RadioStation`
 
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/iterator.php), [C#](examples/csharp/behavioral/Iterator.cs), and [Python](examples/python/behavioral/iterator.py).
+
 Then we have our iterator
 
 And then it can be used as
@@ -491,6 +519,8 @@ Wikipedia says
 Here is the simplest example of a chat room (i.e. mediator) with users (i.e. colleagues) sending messages to each other.
 
 First of all, we have the mediator i.e. the chat room
+
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/mediator.php), [C#](examples/csharp/behavioral/Mediator.cs), and [Python](examples/python/behavioral/mediator.py).
 
 
 Then we have our users i.e. colleagues
@@ -515,6 +545,8 @@ Lets take an example of text editor which keeps saving the state from time to ti
 
 First of all we have our memento object that will be able to hold the editor state
 
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/memento.php), [C#](examples/csharp/behavioral/Memento.cs), and [Python](examples/python/behavioral/memento.py).
+
 
 Then we have our editor i.e. originator that is going to use memento object
 
@@ -536,6 +568,8 @@ Wikipedia says
 **Programmatic example**
 
 Translating our example from above. First of all we have job seekers that need to be notified for a job posting
+
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/observer.php), [C#](examples/csharp/behavioral/Observer.cs), and [Python](examples/python/behavioral/observer.py).
 Then we have our job postings to which the job seekers will subscribe
 Then it can be used as
 
@@ -553,6 +587,8 @@ Wikipedia says
 **Programmatic example**
 
 Let's take an example of a zoo simulation where we have several different kinds of animals and we have to make them Sound. Let's translate this using visitor pattern
+
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/visitor.php), [C#](examples/csharp/behavioral/Visitor.cs), and [Python](examples/python/behavioral/visitor.py).
 
 Then we have our implementations for the animals
 Let's implement our visitor
@@ -578,6 +614,8 @@ Wikipedia says
 
 Translating our example from above. First of all we have our strategy interface and different strategy implementations
 
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/strategy.php), [C#](examples/csharp/behavioral/Strategy.cs), and [Python](examples/python/behavioral/strategy.py).
+
 
 And then we have our client that is going to use any strategy
 And it can be used as
@@ -597,6 +635,8 @@ Wikipedia says
 **Programmatic example**
 
 Let's take an example of a phone. First of all we have our state interface and some state implementations
+
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/state.php), [C#](examples/csharp/behavioral/State.cs), and [Python](examples/python/behavioral/state.py).
 
 
 Then we have our Phone class that changes the state on different behavior calls
@@ -628,6 +668,8 @@ Wikipedia says
 Imagine we have a build tool that helps us test, lint, build, generate build reports (i.e. code coverage reports, linting report etc) and deploy our app on the test server.
 
 First of all we have our base class that specifies the skeleton for the build algorithm
+
+The implementation and usage examples are available in [PHP 7](examples/php/behavioral/template-method.php), [C#](examples/csharp/behavioral/TemplateMethod.cs), and [Python](examples/python/behavioral/template_method.py).
 
 Then we can have our implementations
 
